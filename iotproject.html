@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Various Sensors & Components of IoT</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #121212;
+      font-family: "Poppins", sans-serif;
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .sensor-section {
+      padding: 3rem 1rem;
+    }
+
+    /* Box background colors (different shades) */
+    .sensor:nth-child(1) { background-color: #2b2d42; }
+    .sensor:nth-child(2) { background-color: #1b263b; }
+    .sensor:nth-child(3) { background-color: #283618; }
+    .sensor:nth-child(4) { background-color: #3d1a54; }
+    .sensor:nth-child(5) { background-color: #264653; }
+    .sensor:nth-child(6) { background-color: #4b2e05; }
+    .sensor:nth-child(7) { background-color: #432818; }
+    .sensor:nth-child(8) { background-color: #2a2a72; }
+    .sensor:nth-child(9) { background-color: #3a0ca3; }
+    
+
+    .sensor img {
+      width: 220px;        /* fixed width for uniformity */
+      height: 180px;       /* fixed height */
+      object-fit: cover;   /* keeps aspect ratio while filling the box */
+      border-radius: 10px; /* smooth rounded edges */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .sensor img:hover {
+      transform: scale(1.05);
+    }
+    
+    .sensor {
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      transition: all 0.6s ease-in-out;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .sensor.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sensor:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .sensor-title {
+      color: #ffd166;
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .sensor p {
+      margin-bottom: 0.5rem;
+      color: #f1f1f1;
+    }
+
+    .text-muted {
+      color: #bdbdbd !important;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0d6efd;
+      color: white;
+      font-weight: 500;
+      margin-top: 2rem;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .sensor .row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>Various Sensors & Components of IoT</nav>
+
+  <div class="container sensor-section">
+
+    <!-- Fingerprint Sensor -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="fingerprint.jpg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">Fingerprint Sensor</h4>
+          <p><strong>Uses:</strong> Used for identity verification and authentication in IoT systems.</p>
+          <p><strong>Applications:</strong> Smart door locks, biometric attendance systems, security systems, and access control.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Water Level Sensor -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="water.jpeg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">Water Level Sensor</h4>
+          <p><strong>Uses:</strong> Detects water presence or level in containers and tanks.</p>
+          <p><strong>Applications:</strong> Water tanks, automatic irrigation systems, leak detection, and smart home devices.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- IR Obstacle Avoidance Sensor -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="./obstacle.jpg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">IR Obstacle Avoidance Sensor</h4>
+          <p><strong>Uses:</strong> Detects objects or obstacles using infrared light.</p>
+          <p><strong>Applications:</strong> Robots, automatic lighting, and smart parking systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proximity Sensor -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="./proximitysensor.jpg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">Proximity Sensor</h4>
+          <p><strong>Uses:</strong> Detects nearby objects without physical contact.</p>
+          <p><strong>Applications:</strong> Mobile phones, vehicles, and automation systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buzzer -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="buzze.jpeg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">Buzzer</h4>
+          <p><strong>Uses:</strong> Produces sound alerts in IoT systems.</p>
+          <p><strong>Applications:</strong> Fire alarms, intrusion detection, smart doorbells, and attention systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Relay Module -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="./relay.jpg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">Relay Module</h4>
+          <p><strong>Uses:</strong> Controls high voltage devices using low voltage microcontrollers.</p>
+          <p><strong>Applications:</strong> Smart home automation, motor control, and industrial automation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LDR Sensor -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="./ldrsensor.jpg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">LDR Sensor (Light Dependent Resistor)</h4>
+          <p><strong>Uses:</strong> Detects light intensity to automate lighting systems.</p>
+          <p><strong>Applications:</strong> Automatic street lights, solar devices, weather monitoring, and smart lighting systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jumper Wires -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="./jumper.jpg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">Jumper Wires</h4>
+          <p><strong>Uses:</strong> Used to connect electronic components on a breadboard or circuit.</p>
+          <p><strong>Applications:</strong> IoT prototypes, Arduino connections, and electronic experiments.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LED Lights -->
+    <div class="sensor">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+          <p class="text-muted"><img src="./led.jpg" alt=""></p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="sensor-title">LED Lights</h4>
+          <p><strong>Uses:</strong> Indicate status of IoT circuits or provide light output.</p>
+          <p><strong>Applications:</strong> Smart lamps, signal indicators, and home automation displays.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Project by Sanjana (1072), Ekampreet (1040), and Manpreet (1065) — CSE 5th Sem
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scroll Animation -->
+  <script>
+    const sensors = document.querySelectorAll('.sensor');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      sensors.forEach(sensor => {
+        const elementTop = sensor.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+          sensor.classList.add('show');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>
